@@ -1,6 +1,8 @@
 # CASS Dataset for Summarization
 
-The code available in this repository allows to clean the 
+The code available in this repository allows to clean the CASS dataset and give the split use in
+the paper 'STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings' (Bouscarrat et al., 2019)
+that will appear in the [Student Research Workshop](https://sites.google.com/view/acl19studentresearchworkshop/accepted-papers) of ACL 2019.
 
 # 1) Download
 
