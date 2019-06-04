@@ -10,8 +10,6 @@ import unicodedata
 
 import spacy
 
-import tensorflow as tf
-
 ###############################################################################
 
 LOGGER = logging.getLogger(__name__)
