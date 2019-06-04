@@ -28,7 +28,7 @@ def init_parser():
                                                  will be',
                         default='tokenized_data')
     parser.add_argument('--language', help='Language of the files',
-                        required=True)
+                        default='fr')
     args = vars(parser.parse_args())
     return args
 
