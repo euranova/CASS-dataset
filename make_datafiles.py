@@ -1,3 +1,8 @@
+'''
+This code is partially based on the code of abisee in the repo:
+https://github.com/abisee/cnn-dailymail
+'''
+
 import argparse
 import collections
 import hashlib
