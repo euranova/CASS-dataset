@@ -16,7 +16,21 @@ wget ftp://echanges.dila.gouv.fr/CASS/Freemium_cass_global_20180315-170000.tar.g
 
 * Uncompress the file
 
-## 1.2) 
+## 1.2) Install the Spacy French module
+
+The only module necessary is spacy and the model for the language of the documents. For the CASS dataset it's French.
+
+```shell
+python install spacy
+python -m spacy download fr
+```
+
+or
+
+```shell
+conda install -c conda-forge spacy 
+python -m spacy download fr
+```
 
 
 # 2)Preprocess the data
@@ -47,9 +61,9 @@ Now to tokenize the texts the function make_datafiles.py will be used:
 python3 data/make_datafiles.py --data_dir path_to_your_data --tokenized_dir path_to_tokenized_files --language lang
 ```
 
-Examples:
+For the CASS dataset you can directly use:
 ```shell
-python3 data/make_datafiles.py --data_dir cleaned_data/ --tokenized_dir tokenized_data --language fr
+python3 data/make_datafiles.py --data_dir cleaned_data/
 ```
 
 The --language is used to choose the version of spacy used to tokenize the dataset.
