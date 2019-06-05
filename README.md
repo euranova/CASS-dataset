@@ -10,7 +10,7 @@ that will appear in the [Student Research Workshop](https://sites.google.com/vie
 First, the data need to be download.
 * Download the file starting with 'freemium_cass' (in our case we used the version 20180315).
 This file can be accessed [here](ftp://echanges.dila.gouv.fr/CASS/).
-Information about this dataset can be find [here](https://www.data.gouv.fr/fr/datasets/cass)).
+Information about this dataset can be found [here](https://www.data.gouv.fr/fr/datasets/cass)).
 
 ```shell
 wget ftp://echanges.dila.gouv.fr/CASS/Freemium_cass_global_20180315-170000.tar.gz
