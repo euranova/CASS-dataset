@@ -42,6 +42,11 @@ def tokenize_stories(stories_dir, tokenized_stories_dir, nlp):
     """
     Maps a whole directory of .story files to
     a tokenized version using Spacy Tokenizer
+    :param stories_dir: a str with the path of the directory with the
+    documents
+    :param tokenized_stories_dir: a str with the path where the clean data
+    will be created
+    :param nlp: a Spacy model
     """
     LOGGER.info("Preparing to tokenize %s to %s..." %
                 (stories_dir, tokenized_stories_dir))
@@ -131,7 +136,6 @@ def strip_accents(text):
     try:
         text = unicode(text, 'utf-8')
     except NameError as e:  # unicode is a default on python 3
-        LOGGER.error(e)
         pass
     text = unicodedata.normalize('NFD', text)
     text = text.encode('ascii', 'ignore')
