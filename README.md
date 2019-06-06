@@ -36,7 +36,6 @@ python -m spacy download fr
 
 
 # 2)Preprocess the data
-## 2.1) Clean the data : French 'cours de Cassation dataset'
 
 The preprocessing may need to be changed depending on the format of your data. The file preprocessing_CASS.py
 is specifically made to work on the french CASS dataset.
@@ -44,28 +43,27 @@ is specifically made to work on the french CASS dataset.
 Launch preprocessing_CASS.py with the path of your downloaded CASS dataset :
 
 ```shell
-python3 preprocessing_CASS.py --data_dir path_to_your_data --clean_dir path_to_clean_data --no_split
+python3 preprocessing_CASS.py --data_dir path_to_your_data (--clean_dir path_to_clean_data)
 ```
 
 Example:
 
-```
-python3 preprocessing_CASS.py --data_dir input_data/20180315-170000/ --clean_dir cleaned_data --no_split
-```
-
-All the files containing the necessary information will be in the --clean_dir path.
-
-## 2.2) Tokenize 
-
-Now to tokenize the texts the function make_datafiles.py will be used:
-
 ```shell
-python3 make_datafiles.py --data_dir path_to_your_data --tokenized_dir path_to_tokenized_files --language lang
+python3 preprocessing_CASS.py --data_dir input_data/20180315-170000/
 ```
 
-For the CASS dataset you can directly use:
-```shell
-python3 make_datafiles.py --data_dir cleaned_data/
+With this command all the cleaned files will be created in a repository called cleaned_files. It will contain
+all the files with a text and at list one summary in a format like this:
+
 ```
+sent_textA
+sent_textB
+sent_textC
+@highlight
+sent_sumA
+sent_sumB
+```
+
+All the sentences are tokenized, lowercased and the accents are removed.
 
 The --language is used to choose the version of spacy used to tokenize the dataset.

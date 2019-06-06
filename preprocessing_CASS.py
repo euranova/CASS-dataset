@@ -35,8 +35,6 @@ def init_parser():
                         required=True)
     parser.add_argument('--clean_dir', help='Folder where the clean files will\
                                              be', default='cleaned_files')
-    parser.add_argument('--language', help='Language of the files',
-                        default='fr')
     args = vars(parser.parse_args())
     return args
 
@@ -196,9 +194,8 @@ def main():
     if not os.path.exists(args['clean_dir']):
         os.mkdir(args['clean_dir'])
     path_story = args['clean_dir']
-    lang = args['language']
 
-    nlp = spacy.load(lang, disable=['ner', 'tagger', 'parser'])
+    nlp = spacy.load('fr', disable=['ner', 'tagger', 'parser'])
 
     number_files = 0
 
