@@ -15,7 +15,7 @@ If you use this code, please cite:
           Peel, Thomas and
           Pereira, Cécile",
   title = 	"STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings ",
-  booktitle="Proceedings of ACL",
+  booktitle = "Proceedings of {ACL} 2019, Student Research Workshop",  
   year = 	"2019",
   publisher = 	"Association for Computational Linguistics"
 }
