@@ -82,7 +82,7 @@ def get_text_summary(path, name):
 
 
 def tokenize_stories(text, summary, doc_name, tokenized_stories_dir, nlp):
-    """
+    '''
     Tokenize a file using Spacy Tokenizer
     :param text: a string
     :param summary: a string
@@ -90,7 +90,7 @@ def tokenize_stories(text, summary, doc_name, tokenized_stories_dir, nlp):
     :param tokenized_stories_dir: a str with the path where the clean data
     will be created
     :param nlp: a Spacy model
-    """
+    '''
 
     story = text + '\n@highlight' + summary
     res = ''
@@ -106,47 +106,47 @@ def tokenize_stories(text, summary, doc_name, tokenized_stories_dir, nlp):
 
 
 def hashhex(string):
-    """
+    '''
     Returns a heximal formated SHA1 hash of the input string.
     :param s: a string
     :return h.hexdigest(): a heximal formated SHA1
-    """
+    '''
     hash_str = hashlib.sha1()
     hash_str.update(string.encode())
     return hash_str.hexdigest()
 
 
 def get_url_hashes(url_list):
-    """
+    '''
     Returns a list containing the hashed input urls
     :param url_list: a list of string
     :return hash_list: a list of hashed string
-    """
+    '''
     return [hashhex(url) for url in url_list]
 
 
 def fix_missing_period(line):
-    """
+    '''
     Adds a period to a line that is missing a period
     :param line: a string containing a line
     :return line: a string
-    """
-    if "@highlight" in line:
+    '''
+    if '@highlight' in line:
         return line
-    if line == "":
+    if line == '':
         return line
     if line[-1] in END_TOKENS:
         return line
     # print line[-1]
-    return line + " ."
+    return line + ' .'
 
 
 def fix_missing_new_line(text):
-    """
+    '''
     Adds a new line when it's necessary
     :param text: a string
     :return text_fix: a string
-    """
+    '''
     text = text.replace('....', '... .')
     text = text.replace('. . .', '...')
     text = re.sub(r'(?<=\S) \. (?=\d)', '.', text)
@@ -164,19 +164,19 @@ def fix_missing_new_line(text):
 
 
 def strip_accents(text):
-    """
+    '''
     Replace the accented letters by their equivalent without
     accent
     :param text: a string
     :return str(text): a string
-    """
+    '''
     try:
         text = unicode(text, 'utf-8')
     except NameError:  # unicode is a default on python 3
         pass
     text = unicodedata.normalize('NFD', text)
     text = text.encode('ascii', 'ignore')
-    text = text.decode("utf-8")
+    text = text.decode('utf-8')
     text = text.replace('@highlight', '[HIGHLIGHT]', 1)
     text = text.replace('@highlight', '')
     text = text.replace('[HIGHLIGHT]', '@highlight')
@@ -215,10 +215,10 @@ def main():
 
             number_files += 1
             if number_files % 10000 == 0:
-                LOGGER.info("%d files found", number_files)
+                LOGGER.info('%d files found', number_files)
 
     LOGGER.info('Number of files: %d', number_files)
     return 0
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     sys.exit(main())
