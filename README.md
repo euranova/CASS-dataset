@@ -6,6 +6,21 @@ that will appear in the [Student Research Workshop](https://sites.google.com/vie
 
 This dataset is composed of decisions made by the French Court of cassation and summaries of these decisions made by lawyer.
 
+If you use this code, please cite:
+
+```
+@InProceedings{bouscarrat_cass_2019,
+  author = 	"Bouscarrat, Léo and
+          Bonnefoy, Antoine and
+          Peel, Thomas and
+          Pereira, Cécile",
+  title = 	"STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings ",
+  booktitle="Proceedings of ACL",
+  year = 	"2019",
+  publisher = 	"Association for Computational Linguistics",
+}
+```
+
 ## Download
 
 ### The data: French 'CASS dataset'
