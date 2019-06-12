@@ -17,7 +17,7 @@ If you use this code, please cite:
   title = 	"STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings ",
   booktitle="Proceedings of ACL",
   year = 	"2019",
-  publisher = 	"Association for Computational Linguistics",
+  publisher = 	"Association for Computational Linguistics"
 }
 ```
 
