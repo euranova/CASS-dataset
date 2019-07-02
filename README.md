@@ -81,7 +81,8 @@ sent_sumA
 sent_sumB
 ```
 
-All sentences are tokenized, lowercased and accents are removed.
+All sentences are lowercased and accents are removed.
+The file contains one sentence per row.
 
 ## Data split
 
