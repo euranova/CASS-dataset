@@ -9,15 +9,20 @@ This dataset is composed of decisions made by the French Court of cassation and 
 If you use this code, please cite:
 
 ```
-@InProceedings{bouscarrat_cass_2019,
-  author = 	"Bouscarrat, Léo and
-          Bonnefoy, Antoine and
-          Peel, Thomas and
-          Pereira, Cécile",
-  title = 	"STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings ",
-  booktitle = "Proceedings of {ACL} 2019, Student Research Workshop",  
-  year = 	"2019",
-  publisher = 	"Association for Computational Linguistics"
+@inproceedings{bouscarrat-etal-2019-strass,
+    title = "{STRASS}: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings",
+    author = "Bouscarrat, L{\'e}o  and
+      Bonnefoy, Antoine  and
+      Peel, Thomas  and
+      Pereira, C{\'e}cile",
+    booktitle = "Proceedings of the 57th Conference of the Association for Computational Linguistics: Student Research Workshop",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P19-2034",
+    pages = "243--252",
+    abstract = "This paper introduces STRASS: Summarization by TRAnsformation Selection and Scoring. It is an extractive text summarization method which leverages the semantic information in existing sentence embedding spaces. Our method creates an extractive summary by selecting the sentences with the closest embeddings to the document embedding. The model earns a transformation of the document embedding to minimize the similarity between the extractive summary and the ground truth summary. As the transformation is only composed of a dense layer, the training can be done on CPU, therefore, inexpensive. Moreover, inference time is short and linear according to the number of sentences. As a second contribution, we introduce the French CASS dataset, composed of judgments from the French Court of cassation and their corresponding summaries. On this dataset, our results show that our method performs similarly to the state of the art extractive methods with effective training and inferring time.",
 }
 ```
 
