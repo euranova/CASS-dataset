@@ -1,8 +1,8 @@
 # CASS: Dataset for French text Summarization
 
 The code available in this repository allows to clean the CASS dataset and gives the split used in
-the paper 'STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings' (Bouscarrat et al., 2019)
-that will appear in the [Student Research Workshop](https://sites.google.com/view/acl19studentresearchworkshop/accepted-papers) of ACL 2019.
+the paper '[STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings](https://www.aclweb.org/anthology/papers/P/P19/P19-2034/)' (Bouscarrat et al., 2019)
+that will appeared [Student Research Workshop](https://sites.google.com/view/acl19studentresearchworkshop/accepted-papers) of ACL 2019.
 
 This dataset is composed of decisions made by the French Court of cassation and summaries of these decisions made by lawyer.
 
