@@ -1,8 +1,7 @@
 # CASS: Dataset for French text Summarization
 
 The code available in this repository allows to clean the CASS dataset and gives the split used in
-the paper '[STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings](https://www.aclweb.org/anthology/papers/P/P19/P19-2034/)' (Bouscarrat et al., 2019)
-that has appeared in the [Student Research Workshop](https://sites.google.com/view/acl19studentresearchworkshop/accepted-papers) of ACL 2019.
+the paper '[STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings](https://www.aclweb.org/anthology/papers/P/P19/P19-2034/)' (Bouscarrat et al., 2019) that has appeared in the [Student Research Workshop](https://sites.google.com/view/acl19studentresearchworkshop/accepted-papers) of ACL 2019. It has been subsequently updated by Mila staff members to enable using a more recent version of the CASS dataset.
 
 This dataset is composed of decisions made by the French Court of cassation and summaries of these decisions made by lawyer.
 
@@ -30,30 +29,24 @@ If you use this code, please cite:
 
 ### The data: French 'CASS dataset'
 First, the data needs to be downloaded.
-* Download the file starting with 'freemium_cass' (in our case we used the version 20180315).
-This file can be accessed [here](ftp://echanges.dila.gouv.fr/CASS/).
+
+Download the file starting with 'freemium_cass' (in our case we used the version 20220417).
+
+This file can be accessed [here](https://drive.google.com/file/d/1T-j5ogtD8kMe3QJKwK1doT34q2HipD5W/view?usp=drive_link).
+
+The most recent version of this file can be accessed [here](https://echanges.dila.gouv.fr/OPENDATA/CASS/).
+
 Information about this dataset can be found [here](https://www.data.gouv.fr/fr/datasets/cass)).
 
+Decompress the file:
 ```shell
-wget ftp://echanges.dila.gouv.fr/CASS/Freemium_cass_global_20180315-170000.tar.gz
+tar -zxvf Freemium_cass_global_20220417-170000.tar.gz
 ```
 
-* Uncompress the file
-
-### Install the Spacy French module
-
-The only module necessary is spacy and the model for the language of the documents. For the CASS dataset it's French.
+### Install dependencies with conda
 
 ```shell
-python install spacy
-python -m spacy download fr
-```
-
-or, if you use conda:
-
-```shell
-conda install -c conda-forge spacy 
-python -m spacy download fr
+conda env create
 ```
 
 
@@ -62,16 +55,21 @@ python -m spacy download fr
 As the data is in an XML format with many information and some documents are fully uppercased
 and some others not, there is a need to preprocess the data.
 
+First, activate your virtual environment:
+```
+conda activate cass
+```
+
 Launch preprocessing_CASS.py with the path of your downloaded CASS dataset :
 
 ```shell
-python3 preprocessing_CASS.py --data_dir path_to_your_data (--clean_dir path_to_clean_data)
+python preprocessing_CASS.py --data_dir path_to_your_data (--clean_dir path_to_clean_data)
 ```
 
 Example:
 
 ```shell
-python3 preprocessing_CASS.py --data_dir input_data/20180315-170000/
+python preprocessing_CASS.py --data_dir cass
 ```
 
 With this command all the cleaned files will be created in a folder called cleaned_files. It will contains
