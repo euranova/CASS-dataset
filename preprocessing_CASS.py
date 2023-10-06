@@ -195,7 +195,7 @@ def main():
         os.mkdir(args['clean_dir'])
     path_story = args['clean_dir']
 
-    nlp = spacy.load('fr', disable=['ner', 'tagger', 'parser'])
+    nlp = spacy.load('fr_core_news_sm', disable=['ner', 'tagger', 'parser'])
 
     number_files = 0
 
