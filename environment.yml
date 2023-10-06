@@ -1,0 +1,8 @@
+name: cass
+dependencies:
+  - python=3.10.12
+  - pip=23.1.2
+  - pip:
+    - spacy==3.7.1
+    - https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.7.0/fr_core_news_sm-3.7.0.tar.gz#egg=fr_core_news_sm
+    
